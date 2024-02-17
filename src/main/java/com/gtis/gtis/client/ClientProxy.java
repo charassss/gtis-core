@@ -1,5 +1,6 @@
-package com.gtis.gtis.proxy;
+package com.gtis.gtis.client;
 
+import com.gtis.gtis.common.CommonProxy;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
@@ -10,7 +11,7 @@ import java.util.Objects;
  * @author Chara_SS
  */
 @SuppressWarnings("unused")
-public class ClientProxy extends ProxyBase {
+public class ClientProxy extends CommonProxy {
 
         @Override
         public boolean isServer() {

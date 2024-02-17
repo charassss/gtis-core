@@ -1,9 +1,9 @@
-package com.gtis.gtis.block;
+package com.gtis.gtis.common.block;
 
 import com.gtis.gtis.GTISCore;
-import com.gtis.gtis.init.ModCreativeTab;
-import com.gtis.gtis.item.ModItems;
-import com.gtis.gtis.util.IHasModel;
+import com.gtis.gtis.common.ModCreativeTab;
+import com.gtis.gtis.common.item.ModItems;
+import com.gtis.gtis.client.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;

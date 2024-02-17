@@ -1,8 +1,8 @@
-package com.gtis.gtis.init;
+package com.gtis.gtis.common;
 
-import com.gtis.gtis.block.ModBlocks;
-import com.gtis.gtis.item.ModItems;
-import com.gtis.gtis.util.IHasModel;
+import com.gtis.gtis.common.block.ModBlocks;
+import com.gtis.gtis.common.item.ModItems;
+import com.gtis.gtis.client.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;

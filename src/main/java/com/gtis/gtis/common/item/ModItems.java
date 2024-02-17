@@ -1,4 +1,4 @@
-package com.gtis.gtis.item;
+package com.gtis.gtis.common.item;
 
 import net.minecraft.item.Item;
 

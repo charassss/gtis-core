@@ -1,4 +1,4 @@
-package com.gtis.gtis.util;
+package com.gtis.gtis.common;
 
 import com.gtis.gtis.GTISCore;
 
@@ -11,5 +11,5 @@ public class Reference {
     public static final String VERSION = GTISCore.VERSION;
     public static final String ACCEPTED_VERSIONS = "[1.12.2]";
     public static final String CLIENT_PROXY_CLASS = "com.gtis.gtis.proxy.ClientProxy";
-    public static final String SERVER_PROXY_CLASS = "com.gtis.gtis.proxy.ServerProxy";
+    public static final String COMMON_PROXY_CLASS = "com.gtis.gtis.common.CommonProxy";
 }
