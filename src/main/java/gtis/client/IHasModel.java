@@ -1,4 +1,4 @@
-package com.gtis.gtis.client;
+package gtis.client;
 
 /**
  * @author Chara_SS

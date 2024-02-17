@@ -1,6 +1,6 @@
-package com.gtis.gtis.common.te;
+package gtis.common.te;
 
-import com.gtis.gtis.common.recipe.ModRecipeMaps;
+import gtis.common.recipe.ModRecipeMaps;
 import gregtech.api.capability.impl.NotifiableItemStackHandler;
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.gui.ModularUI;

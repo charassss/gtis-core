@@ -1,9 +1,9 @@
-package com.gtis.gtis;
+package gtis;
 
-import com.gtis.gtis.common.recipe.ModGregRecipes;
-import com.gtis.gtis.common.te.ModMetaTileEntities;
-import com.gtis.gtis.common.CommonProxy;
-import com.gtis.gtis.common.Reference;
+import gtis.common.recipe.ModGregRecipes;
+import gtis.common.te.ModMetaTileEntities;
+import gtis.common.CommonProxy;
+import gtis.common.Reference;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;

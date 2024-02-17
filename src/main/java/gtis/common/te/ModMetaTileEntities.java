@@ -1,6 +1,6 @@
-package com.gtis.gtis.common.te;
+package gtis.common.te;
 
-import com.gtis.gtis.GTISCore;
+import gtis.GTISCore;
 import net.minecraft.util.ResourceLocation;
 
 import static gregtech.common.metatileentities.MetaTileEntities.registerMetaTileEntity;

@@ -1,4 +1,4 @@
-package com.gtis.gtis.common.recipe;
+package gtis.common.recipe;
 
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.gui.widgets.ProgressWidget;

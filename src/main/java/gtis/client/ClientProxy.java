@@ -1,6 +1,6 @@
-package com.gtis.gtis.client;
+package gtis.client;
 
-import com.gtis.gtis.common.CommonProxy;
+import gtis.common.CommonProxy;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;

@@ -1,8 +1,8 @@
-package com.gtis.gtis.common.item;
+package gtis.common.item;
 
-import com.gtis.gtis.GTISCore;
-import com.gtis.gtis.common.ModCreativeTab;
-import com.gtis.gtis.client.IHasModel;
+import gtis.GTISCore;
+import gtis.common.ModCreativeTab;
+import gtis.client.IHasModel;
 import net.minecraft.item.Item;
 
 /**

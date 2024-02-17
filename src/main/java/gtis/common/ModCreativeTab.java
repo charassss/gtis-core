@@ -1,4 +1,4 @@
-package com.gtis.gtis.common;
+package gtis.common;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;

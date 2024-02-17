@@ -1,8 +1,8 @@
-package com.gtis.gtis.common.recipe;
+package gtis.common.recipe;
 
 import net.minecraft.init.Items;
 
-import static com.gtis.gtis.common.recipe.ModRecipeMaps.*;
+import static gtis.common.recipe.ModRecipeMaps.*;
 
 /**
  * @author Chara_SS
