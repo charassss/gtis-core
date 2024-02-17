@@ -1,14 +1,13 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "gtiscore",
+  "name": "GTIS Core",
+  "description": "A mod for modpack GregTech: Infinity Skyblock.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["CleanroomMC"],
-  "credits": "Authors of this project",
+  "authorList": ["Chara_SS"],
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

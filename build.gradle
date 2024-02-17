@@ -19,7 +19,7 @@ java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(8))
         // Azul covers the most platforms for Java 8 toolchains, crucially including MacOS arm64
-        vendor.set(org.gradle.jvm.toolchain.JvmVendorSpec.AZUL)
+        vendor.set(JvmVendorSpec.AZUL)
     }
     // Generate sources and javadocs jars when building and publishing
     withSourcesJar()
@@ -43,7 +43,7 @@ minecraft {
     mcpMappingVersion = '39'
     
     // Set username here, the UUID will be looked up automatically
-    username = 'Developer'
+    username = 'Chara_SS'
     
     // Add any additional tweaker classes here
     // extraTweakClasses.add('org.spongepowered.asm.launch.MixinTweaker')
@@ -51,12 +51,12 @@ minecraft {
     // Add various JVM arguments here for runtime
     def args = ["-ea:${project.group}"]
     if (project.use_coremod.toBoolean()) {
-        args << '-Dfml.coreMods.load=' + coremod_plugin_class_name
+        args << ('-Dfml.coreMods.load=' + coremod_plugin_class_name as GString)
     }
     if (project.use_mixins.toBoolean()) {
-        args << '-Dmixin.hotSwap=true'
-        args << '-Dmixin.checks.interfaces=true'
-        args << '-Dmixin.debug.export=true'
+        args << ('-Dmixin.hotSwap=true' as GString)
+        args << ('-Dmixin.checks.interfaces=true' as GString)
+        args << ('-Dmixin.debug.export=true' as GString)
     }
     extraRunJvmArguments.addAll(args)
 
@@ -92,6 +92,14 @@ repositories {
             includeGroup 'curse.maven'
         }
     }
+    maven {
+        name 'BlameJared Maven'
+        url 'https://maven.blamejared.com'
+    }
+    maven {
+        name 'GTCEu Maven'
+        url 'https://maven.gtceu.com'
+    }
     mavenLocal() // Must be last for caching to work
 }
 
@@ -120,16 +128,28 @@ dependencies {
         }
     }
 
+    api("gregtech:gregtech:2.8.6-beta")
+
+    api("codechicken:codechickenlib:3.2.3.358")
+    api("com.cleanroommc:groovyscript:0.7.3") { transitive = false }
 }
 
 // Adds Access Transformer files to tasks
 if (project.use_access_transformer.toBoolean()) {
-    for (File at : sourceSets.getByName("main").resources.files) {
-        if (at.name.toLowerCase().endsWith("_at.cfg")) {
-            tasks.deobfuscateMergedJarToSrg.accessTransformerFiles.from(at)
-            tasks.srgifyBinpatchedJar.accessTransformerFiles.from(at)
+    sourceSets.named("main").configure {
+        for (File at : resources.files) {
+            if (at.name.toLowerCase().endsWith("_at.cfg")) {
+                tasks.deobfuscateMergedJarToSrg.accessTransformerFiles.from(at)
+                tasks.srgifyBinpatchedJar.accessTransformerFiles.from(at)
+            }
         }
     }
+//    for (File at : sourceSets.getByName("main").resources.files) {
+//        if (at.name.toLowerCase().endsWith("_at.cfg")) {
+//            tasks.deobfuscateMergedJarToSrg.accessTransformerFiles.from(at)
+//            tasks.srgifyBinpatchedJar.accessTransformerFiles.from(at)
+//        }
+//    }
 }
 
 processResources {
