@@ -2,6 +2,7 @@ package gtis.common.recipe;
 
 import net.minecraft.init.Items;
 
+import static gregtech.api.GTValues.*;
 import static gtis.common.recipe.ModRecipeMaps.*;
 
 /**
@@ -15,9 +16,11 @@ public class ModGregRecipes {
     public static void steamTestRecipes() {
         STEAM_TEST_RECIPE.recipeBuilder()
                 .input(Items.APPLE, 1)
-                .output(Items.GOLDEN_APPLE, 1)
-                .duration(1)
-                .EUt(4)
+                .chancedOutput(Items.GOLDEN_APPLE.getDefaultInstance(), 5000,0)
+                .chancedOutput(Items.GOLD_INGOT.getDefaultInstance(), 5000, 0)
+                .duration(10)
+                .EUt(VA[ULV])
                 .buildAndRegister();
     }
 }
+
