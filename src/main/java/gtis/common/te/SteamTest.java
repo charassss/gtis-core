@@ -34,7 +34,7 @@ public class SteamTest extends SteamMetaTileEntity {
 
     @Override
     protected IItemHandlerModifiable createExportItemHandler() {
-        return new NotifiableItemStackHandler(this, 1, this, true);
+        return new NotifiableItemStackHandler(this, 2, this, true);
     }
 
     @Override
@@ -43,8 +43,11 @@ public class SteamTest extends SteamMetaTileEntity {
                 .slot(this.importItems, 0, 53, 25, GuiTextures.SLOT_STEAM.get(isHighPressure), GuiTextures.FURNACE_OVERLAY_STEAM.get(isHighPressure))
                 .slot(this.importItems, 1, 53, 55, GuiTextures.SLOT_STEAM.get(isHighPressure), GuiTextures.FURNACE_OVERLAY_STEAM.get(isHighPressure))
                 .progressBar(workableHandler::getProgressPercent, 79, 26, 20, 16,
+                        GuiTextures.PROGRESS_BAR_ARROW_STEAM.get(isHighPressure), ProgressWidget.MoveType.HORIZONTAL_BACKWARDS, workableHandler.getRecipeMap())
+                .progressBar(workableHandler::getProgressPercent, 79, 56, 20, 16,
                         GuiTextures.PROGRESS_BAR_ARROW_STEAM.get(isHighPressure), ProgressWidget.MoveType.HORIZONTAL, workableHandler.getRecipeMap())
                 .slot(this.exportItems, 0, 107, 25, true, false, GuiTextures.SLOT_STEAM.get(isHighPressure))
+                .slot(this.exportItems, 1, 107, 55, true, false, GuiTextures.SLOT_STEAM.get(isHighPressure))
                 .build(getHolder(), entityPlayer);
     }
 }

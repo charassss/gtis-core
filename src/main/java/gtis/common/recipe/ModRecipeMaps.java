@@ -12,7 +12,7 @@ import gregtech.core.sound.GTSoundEvents;
 public class ModRecipeMaps {
     public static final RecipeMap<SimpleRecipeBuilder> STEAM_TEST_RECIPE = new RecipeMap<>("steam_test",
             2,
-            1,
+            2,
             0,
             0,
             new SimpleRecipeBuilder(),
