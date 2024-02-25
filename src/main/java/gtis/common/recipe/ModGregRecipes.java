@@ -19,7 +19,7 @@ public class ModGregRecipes {
                 .chancedOutput(Items.GOLDEN_APPLE.getDefaultInstance(), 5000,0)
                 .chancedOutput(Items.GOLD_INGOT.getDefaultInstance(), 5000, 0)
                 .duration(10)
-                .EUt(VA[MAX])
+                .EUt(VA[LV])
                 .buildAndRegister();
     }
 }
