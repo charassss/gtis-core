@@ -6,7 +6,7 @@ plugins {
     id 'maven-publish'
     id 'org.jetbrains.gradle.plugin.idea-ext' version '1.1.7'
     id 'eclipse'
-    id 'com.gtnewhorizons.retrofuturagradle' version '1.3.27'
+    id 'com.gtnewhorizons.retrofuturagradle' version '1.3.33'
     id 'com.matthewprenger.cursegradle' version '1.4.0'
 }
 
@@ -114,20 +114,20 @@ dependencies {
     // Example of deobfuscating a dependency
     // implementation rfg.deobf('curse.maven:had-enough-items-557549:4543375')
 
-    // disable until we use mixin
-//    if (project.use_mixins.toBoolean()) {
-//        // Change your mixin refmap name here:
-//        String mixin = modUtils.enableMixins('org.spongepowered:mixin:0.8.3', "mixins.${project.archives_base_name}.refmap.json")
-//        api (mixin) {
-//            transitive = false
-//        }
-//        annotationProcessor 'org.ow2.asm:asm-debug-all:5.2'
-//        annotationProcessor 'com.google.guava:guava:24.1.1-jre'
-//        annotationProcessor 'com.google.code.gson:gson:2.8.6'
-//        annotationProcessor (mixin) {
-//            transitive = false
-//        }
-//    }
+    // hard to use
+    if (project.use_mixins.toBoolean()) {
+        // Change your mixin refmap name here:
+        String mixin = modUtils.enableMixins('zone.rong:mixinbooter:9.1', "mixins.gtiscore.refmap.json")
+        api (mixin) {
+            transitive = false
+        }
+        annotationProcessor 'org.ow2.asm:asm-debug-all:5.2'
+        annotationProcessor 'com.google.guava:guava:24.1.1-jre'
+        annotationProcessor 'com.google.code.gson:gson:2.8.6'
+        annotationProcessor (mixin) {
+            transitive = false
+        }
+    }
     // provided maven
     api("gregtech:gregtech:2.8.7-beta")
 
@@ -136,6 +136,7 @@ dependencies {
 
     // no provided maven
 
+    api rfg.deobf("curse.maven:extra-utilities-2-225561:2678374")
 //    api rfg.deobf("curse.maven:ae2-extended-life-570458:4402048")
 }
 
@@ -230,3 +231,4 @@ idea {
 tasks.named("processIdeaSettings").configure {
     dependsOn("injectTags")
 }
+
