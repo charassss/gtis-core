@@ -1,21 +1,18 @@
 package gtis.common.te;
 
-import gtis.GTISCore;
-import net.minecraft.util.ResourceLocation;
-
 import static gregtech.common.metatileentities.MetaTileEntities.registerMetaTileEntity;
+import static gtis.common.GTISUtility.gtisId;
 
 /**
  * @author Chara_SS
  */
 public class ModMetaTileEntities {
+    @SuppressWarnings({"unused", "FieldCanBeLocal"})
     private static SteamTest STEAM_TEST;
 
     public static void init() {
         STEAM_TEST = registerMetaTileEntity(30201, new SteamTest(gtisId("STEAM_TEST"), false));
     }
 
-    public static ResourceLocation gtisId(String name) {
-        return new ResourceLocation(GTISCore.MODID, name);
-    }
+
 }
