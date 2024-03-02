@@ -1,5 +1,7 @@
 package gtis;
 
+import gregtech.api.unification.material.event.MaterialEvent;
+import gtis.common.materials.Modmaterials;
 import gtis.common.recipe.ModGregRecipes;
 import gtis.common.te.ModMetaTileEntities;
 import gtis.common.CommonProxy;
@@ -42,9 +44,9 @@ public class GTISCore {
     public void onConstruction(FMLConstructionEvent event) {
         MinecraftForge.EVENT_BUS.register(this);
     }
+
     @EventHandler
-    public void preInit(@NotNull FMLPreInitializationEvent event)
-    {
+    public void preInit(@NotNull FMLPreInitializationEvent event) {
         logger = event.getModLog();
         ModMetaTileEntities.init();
     }
@@ -59,5 +61,10 @@ public class GTISCore {
         // some example code
 //        logger.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
         logger.info("Hello Minecraft!");
+    }
+
+    @SubscribeEvent
+    public void registerMaterials(MaterialEvent event) {
+        Modmaterials.init();
     }
 }
