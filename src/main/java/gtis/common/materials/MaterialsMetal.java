@@ -4,20 +4,23 @@ import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.info.MaterialIconSet;
 import gregtech.api.unification.material.properties.BlastProperty;
 
-import static gregtech.api.GTValues.*;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
-import static gregtech.api.unification.material.info.MaterialFlags.GENERATE_GEAR;
 import static gtis.common.GTISUtility.gtisId;
+import static gtis.common.materials.MaterialsFluid.*;
+
 
 /**
  * @author Orirock
  */
-public class Modmaterials {
-    private static Material materialMana ;
+public class MaterialsMetal {
+    private static Material metalManaSteel ;
+    private static int START_ID = 10001;
+    //metalID: 10001~11001
+    private static final int END_ID = START_ID + 1000;
 
     public static void init() {
-        materialMana = new Material.Builder(32766, gtisId("materials_mana"))
+        metalManaSteel = new Material.Builder(getMetalId(), gtisId("metalManaSteel"))
                 .ingot()
                 .color(0x3389FF)
                 //CEu uses the hex color code, but make sure to put 0x before the hex color
@@ -25,11 +28,9 @@ public class Modmaterials {
                 //gregtech/api/unification/material/info/MaterialIconSet.java
                 .flags(GENERATE_PLATE, MORTAR_GRINDABLE, GENERATE_FINE_WIRE, GENERATE_ROTOR, GENERATE_FRAME, GENERATE_SMALL_GEAR, GENERATE_FOIL, GENERATE_GEAR)
                 //Flags, you can find all of them at gregtech/api/unification/material/info/MaterialFlags.java
-                .components(Iron, 1, Oxygen, 20)
+                .components(Iron, 1, fluidMana, 20)
                 //You can find all materials on gregtech/api/unification/material/Materials.java
-                .itemPipeProperties(8192, 1)
-                //Priority, transferRate
-                .cableProperties(VA[UV], 128, 0, true, 78)
+                .cableProperties(32, 1, 0, true, 78)
                 //Voltage, Amps, EnergyLoss, isSuperConductor, CriticalTemp
 //                .blastTemp(9001, BlastProperty.GasTier.HIGHER, VA[ZPM], 1000)
                 /*
@@ -37,7 +38,13 @@ public class Modmaterials {
                  */
                 .blast(9001, BlastProperty.GasTier.HIGHER)
                 //Temp, GasTier, eutOverride, durationOveride (in ticks)
-
                 .build();
     }
+    private static int getMetalId() {
+        if (START_ID < END_ID) {
+            return START_ID++;
+        }
+        throw new ArrayIndexOutOfBoundsException();
+    }
+
 }
