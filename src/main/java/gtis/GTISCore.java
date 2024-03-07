@@ -1,7 +1,7 @@
 package gtis;
 
 import gregtech.api.unification.material.event.MaterialEvent;
-import gtis.common.materials.MaterialsMetal;
+import gtis.common.materials.MaterialMetals;
 import gtis.common.recipe.ModGregRecipes;
 import gtis.common.te.ModMetaTileEntities;
 import gtis.common.CommonProxy;
@@ -18,7 +18,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
-import gtis.common.materials.MaterialsFluid;
+import gtis.common.materials.MaterialFluids;
 
 /**
  * @author Chara_SS
@@ -66,8 +66,8 @@ public class GTISCore {
 
     @SubscribeEvent
     public void registerMaterials(MaterialEvent event) {
-        MaterialsFluid.init();
-        MaterialsMetal.init();
+        MaterialFluids.init();
+        MaterialMetals.init();
 
     }
 }

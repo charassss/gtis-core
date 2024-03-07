@@ -10,7 +10,7 @@ import static gtis.common.GTISUtility.gtisId;
  * @author Orirock
  */
 //@SuppressWarnings({"unused", "FieldCanBeLocal"})
-public class MaterialsFluid {
+public class MaterialFluids {
     public static Material mana;
     private static int START_ID = 11001;
     //fluidID: 11001~12001
@@ -20,7 +20,7 @@ public class MaterialsFluid {
                 .fluid()
                 .color(0x00CCFF)
                 .iconSet(MaterialIconSet.FLUID)
-                .element(MaterialsElement.ELEMENT_MANA)
+                .element(MaterialElements.ELEMENT_MANA)
                 .build();
     }
     private static int getFluidId() {

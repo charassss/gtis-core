@@ -7,13 +7,13 @@ import gregtech.api.unification.material.properties.BlastProperty;
 import static gregtech.api.unification.material.Materials.*;
 import static gregtech.api.unification.material.info.MaterialFlags.*;
 import static gtis.common.GTISUtility.gtisId;
-import static gtis.common.materials.MaterialsFluid.*;
+import static gtis.common.materials.MaterialFluids.*;
 
 
 /**
  * @author Orirock
  */
-public class MaterialsMetal {
+public class MaterialMetals {
     public static Material manaSteel;
     private static int START_ID = 10001;
     //metalID: 10001~11001
