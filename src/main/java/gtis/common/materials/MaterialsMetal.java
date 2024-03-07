@@ -14,13 +14,13 @@ import static gtis.common.materials.MaterialsFluid.*;
  * @author Orirock
  */
 public class MaterialsMetal {
-    public static Material metalManaSteel ;
+    public static Material manaSteel;
     private static int START_ID = 10001;
     //metalID: 10001~11001
     private static final int END_ID = START_ID + 1000;
 
     public static void init() {
-        metalManaSteel = new Material.Builder(getMetalId(), gtisId("metalManaSteel"))
+        manaSteel = new Material.Builder(getMetalId(), gtisId("manaSteel"))
                 .ingot()
                 .color(0x3389FF)
                 //CEu uses the hex color code, but make sure to put 0x before the hex color
@@ -28,7 +28,7 @@ public class MaterialsMetal {
                 //gregtech/api/unification/material/info/MaterialIconSet.java
                 .flags(GENERATE_PLATE, MORTAR_GRINDABLE, GENERATE_FINE_WIRE, GENERATE_ROTOR, GENERATE_FRAME, GENERATE_SMALL_GEAR, GENERATE_FOIL, GENERATE_GEAR)
                 //Flags, you can find all of them at gregtech/api/unification/material/info/MaterialFlags.java
-                .components(Iron, 1, fluidMana, 6)
+                .components(Iron, 1, mana, 6)
                 //You can find all materials on gregtech/api/unification/material/Materials.java
                 .cableProperties(32, 1, 0, true, 78)
                 //Voltage, Amps, EnergyLoss, isSuperConductor, CriticalTemp

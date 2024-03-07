@@ -11,16 +11,16 @@ import static gtis.common.GTISUtility.gtisId;
  */
 //@SuppressWarnings({"unused", "FieldCanBeLocal"})
 public class MaterialsFluid {
-    public static Material fluidMana ;
+    public static Material mana;
     private static int START_ID = 11001;
     //fluidID: 11001~12001
     private static final int END_ID = START_ID + 1000;
     public static void init(){
-        fluidMana = new Material.Builder(getFluidId(),gtisId("fluidMana"))
+        mana = new Material.Builder(getFluidId(),gtisId("mana"))
                 .fluid()
                 .color(0x00CCFF)
                 .iconSet(MaterialIconSet.FLUID)
-                .element(MaterialsElement.elementMana)
+                .element(MaterialsElement.ELEMENT_MANA)
                 .build();
     }
     private static int getFluidId() {

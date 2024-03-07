@@ -9,7 +9,7 @@ import gregtech.api.unification.Elements;
 public class MaterialsElement {
     //Fluid
 
-    public static final Element elementMana = Elements.add(0,0,-1,null,"Mana","Mana",true);
+    public static final Element ELEMENT_MANA = Elements.add(0,0,-1,null,"Mana","Mana",true);
 
     //Metals
 }
