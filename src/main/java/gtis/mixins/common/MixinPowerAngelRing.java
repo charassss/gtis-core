@@ -1,4 +1,4 @@
-package gtis.mixins;
+package gtis.mixins.common;
 
 import com.rwtema.extrautils2.items.ItemAngelRing;
 import com.rwtema.extrautils2.power.player.PlayerPower;

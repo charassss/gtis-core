@@ -1,4 +1,4 @@
-package gtis.mixins;
+package gtis.mixins.common;
 
 import com.rwtema.extrautils2.backend.XUItemFlatMetadata;
 import com.rwtema.extrautils2.items.ItemAngelRing;
