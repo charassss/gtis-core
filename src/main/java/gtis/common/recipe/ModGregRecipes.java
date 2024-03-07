@@ -28,10 +28,6 @@ public class ModGregRecipes {
                 .EUt(VA[LV])
                 .buildAndRegister();
     }
-    /*试图增加化学反应釜的合成表，但是不会调用Steel和metalManaSteel
-    钢块*1+54mb液态魔力---->魔力钢块*1
-    钢锭*1+6mb 液态魔力---->魔力钢锭*1
-    */
     public static void chemicalReactorRecipes(){
         RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
                 .input(ingot, Steel)
