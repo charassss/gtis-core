@@ -1,0 +1,12 @@
+{
+  "parent": "block/casing/cube",
+  "textures": {
+    "particle": "gtiscore:blocks/casing/machine_casing_mana_steel",
+    "down": "gtiscore:blocks/casing/machine_casing_mana_steel",
+    "up": "gtiscore:blocks/casing/machine_casing_mana_steel",
+    "north": "gtiscore:blocks/casing/machine_casing_mana_steel",
+    "south": "gtiscore:blocks/casing/machine_casing_mana_steel",
+    "west": "gtiscore:blocks/casing/machine_casing_mana_steel",
+    "east": "gtiscore:blocks/casing/machine_casing_mana_steel"
+  }
+}

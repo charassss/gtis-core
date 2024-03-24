@@ -5,4 +5,5 @@ package gtis.client;
  */
 public interface IHasModel {
     void registerModels();
+
 }

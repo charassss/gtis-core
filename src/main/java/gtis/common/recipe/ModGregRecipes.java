@@ -1,14 +1,16 @@
 package gtis.common.recipe;
 
 import gregtech.api.recipes.RecipeMaps;
+import gregtech.api.unification.ore.OrePrefix;
+import gregtech.common.items.MetaItems;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 
 import static gregtech.api.GTValues.*;
-import static gregtech.api.unification.material.Materials.Steel;
-import static gregtech.api.unification.ore.OrePrefix.ingot;
-import static gtis.common.materials.MaterialFluids.mana;
-import static gtis.common.materials.MaterialMetals.manaSteel;
-import static gtis.common.recipe.ModRecipeMaps.STEAM_TEST_RECIPE;
+import static gregtech.api.unification.material.Materials.*;
+import static gtis.common.materials.MaterialFluids.*;
+import static gtis.common.materials.MaterialMetals.*;
+import static gtis.common.recipe.ModRecipeMaps.*;
 
 /**
  * @author Chara_SS
@@ -30,10 +32,18 @@ public class ModGregRecipes {
     }
     public static void chemicalReactorRecipes(){
         RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
-                .input(ingot, Steel)
+                .input(OrePrefix.block,Steel)
                 .fluidInputs(mana.getFluid(54))
-                .output(ingot, manaSteel)
-                .duration(10)
+                .output(OrePrefix.block,manaSteel)
+                .duration(900)
+                .EUt(VA[MV])
+                .buildAndRegister();
+
+        RecipeMaps.CHEMICAL_RECIPES.recipeBuilder()
+                .input(OrePrefix.ingot,Steel)
+                .fluidInputs(mana.getFluid(6))
+                .output(OrePrefix.ingot,manaSteel)
+                .duration(100)
                 .EUt(VA[MV])
                 .buildAndRegister();
     }

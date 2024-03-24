@@ -13,5 +13,5 @@ import java.util.List;
 public class ModBlocks {
     public static final List<Block> BLOCKS = new ArrayList<>();
 
-    public static final Block MANA_INGOT_CASING_BLOCK = new BlockBase("mana_ingot_casing_block", Material.ROCK);
+    public static final Block MANA_CASING_BLOCK = new BlockBase("machine_casing_mana_steel", Material.ROCK);
 }
