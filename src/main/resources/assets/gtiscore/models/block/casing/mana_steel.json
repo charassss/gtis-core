@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "particle": "gtiscore:blocks/casing/mana_steel",
+    "all": "gtiscore:blocks/casing/mana_steel"
+  }
+}

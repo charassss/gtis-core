@@ -1,7 +1,7 @@
 package gtis.common.block;
 
+import gtis.common.block.casing.ManaSteelMachineCasing;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,5 +13,5 @@ import java.util.List;
 public class ModBlocks {
     public static final List<Block> BLOCKS = new ArrayList<>();
 
-    public static final Block MANA_CASING_BLOCK = new BlockBase("machine_casing_mana_steel", Material.ROCK);
+    public static final Block MANA_STEEL_CASING_BLOCK = new ManaSteelMachineCasing("mana_steel");
 }
