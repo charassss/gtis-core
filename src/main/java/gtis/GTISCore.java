@@ -2,6 +2,7 @@ package gtis;
 
 import gregtech.api.unification.material.event.MaterialEvent;
 import gtis.common.materials.MaterialMetals;
+import gtis.common.recipe.CraftingTableRecipeLoader;
 import gtis.common.recipe.ModGregRecipes;
 import gtis.common.te.ModMetaTileEntities;
 import gtis.common.CommonProxy;
@@ -61,6 +62,7 @@ public class GTISCore {
     public void init(FMLInitializationEvent event) {
         // some example code
 //        logger.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+        new CraftingTableRecipeLoader();
         logger.info("Hello Minecraft!");
     }
 

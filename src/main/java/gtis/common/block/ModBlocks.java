@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * @author Chara_SS
  */
-@SuppressWarnings("unused")
+//@SuppressWarnings("unused")
 public class ModBlocks {
     public static final List<Block> BLOCKS = new ArrayList<>();
 
