@@ -24,6 +24,7 @@ import java.util.Objects;
 public class CasingBase extends Block implements IHasModel {
 
     private final Material gtMaterial;
+    private final boolean autoRecipe;
 
     {
         ModRecipes.CASING_BASES.add(this);
@@ -34,12 +35,30 @@ public class CasingBase extends Block implements IHasModel {
         super(vlmaterial);
         setDefaultProperties(materialName);
         this.gtMaterial = gtMaterial;
+        this.autoRecipe = true;
+    }
+
+    @SuppressWarnings("unused")
+    public CasingBase(String materialName, net.minecraft.block.material.Material vlmaterial, Material gtMaterial, boolean autoRecipe) {
+        super(vlmaterial);
+        setDefaultProperties(materialName);
+        this.gtMaterial = gtMaterial;
+        this.autoRecipe = autoRecipe;
     }
 
     public CasingBase(String materialName, Material gtmaterial) {
         super(net.minecraft.block.material.Material.ROCK);
         setDefaultProperties(materialName);
         this.gtMaterial = gtmaterial;
+        this.autoRecipe = true;
+    }
+
+    @SuppressWarnings("unused")
+    public CasingBase(String materialName, Material gtmaterial, boolean autoRecipe) {
+        super(net.minecraft.block.material.Material.ROCK);
+        setDefaultProperties(materialName);
+        this.gtMaterial = gtmaterial;
+        this.autoRecipe = autoRecipe;
     }
 
     private void setDefaultProperties(String materialName) {
@@ -53,6 +72,9 @@ public class CasingBase extends Block implements IHasModel {
     }
 
     public void addRecipe() {
+        if (!this.autoRecipe) {
+            return;
+        }
         ModHandler.addShapedRecipe("test", new ItemStack(this, 2),
                 "PhP",
                 "PFP",
