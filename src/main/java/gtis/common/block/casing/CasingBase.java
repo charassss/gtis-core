@@ -5,12 +5,14 @@ import gtis.client.IHasModel;
 import gtis.common.ModCreativeTab;
 import gtis.common.block.ModBlocks;
 import gtis.common.item.ModItems;
+import gtis.common.recipe.ModRecipeFactory;
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 
 import java.util.Objects;
+
+
 
 /**
  * @author Chara_SS
@@ -18,13 +20,15 @@ import java.util.Objects;
 public class CasingBase extends Block implements IHasModel {
 
     @SuppressWarnings("unused")
-    public CasingBase(String materialName, Material material) {
-        super(material);
+    public CasingBase(String materialName, net.minecraft.block.material.Material vlmaterial, gregtech.api.unification.material.Material gtmaterial) {
+        super(vlmaterial);
+        ModRecipeFactory.casingFactory(gtmaterial);
         setDefaultProperties(materialName);
     }
 
-    public CasingBase(String materialName) {
-        super(Material.ROCK);
+    public CasingBase(String materialName ,gregtech.api.unification.material.Material gtmaterial) {
+        super(net.minecraft.block.material.Material.ROCK);
+        ModRecipeFactory.casingFactory(gtmaterial);
         setDefaultProperties(materialName);
     }
 
