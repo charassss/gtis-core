@@ -40,6 +40,7 @@ public class MaterialMetals {
                 //Temp, GasTier, eutOverride, durationOveride (in ticks)
                 .build();
     }
+
     private static int getMetalId() {
         if (START_ID < END_ID) {
             return START_ID++;

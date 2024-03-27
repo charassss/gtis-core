@@ -7,6 +7,6 @@ import gregtech.api.unification.material.Material;
  */
 public class ManaSteelMachineCasing extends CasingBase {
     public ManaSteelMachineCasing(String name, Material material) {
-        super(name,material);
+        super(name, material);
     }
 }

@@ -1,17 +1,21 @@
 package gtis.common.block.casing;
 
+import gregtech.api.recipes.ModHandler;
+import gregtech.api.unification.material.Material;
+import gregtech.api.unification.ore.OrePrefix;
+import gregtech.api.unification.stack.UnificationEntry;
 import gtis.GTISCore;
 import gtis.client.IHasModel;
 import gtis.common.ModCreativeTab;
 import gtis.common.block.ModBlocks;
 import gtis.common.item.ModItems;
-import gtis.common.recipe.ModRecipeFactory;
+import gtis.common.recipe.ModRecipes;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
 
 import java.util.Objects;
-
 
 
 /**
@@ -19,19 +23,24 @@ import java.util.Objects;
  */
 public class CasingBase extends Block implements IHasModel {
 
+    private final Material gtMaterial;
+
+    {
+        ModRecipes.CASING_BASES.add(this);
+    }
+
     @SuppressWarnings("unused")
-    public CasingBase(String materialName, net.minecraft.block.material.Material vlmaterial, gregtech.api.unification.material.Material gtmaterial) {
+    public CasingBase(String materialName, net.minecraft.block.material.Material vlmaterial, Material gtMaterial) {
         super(vlmaterial);
-        ModRecipeFactory.casingFactory(gtmaterial);
         setDefaultProperties(materialName);
+        this.gtMaterial = gtMaterial;
     }
 
-    public CasingBase(String materialName ,gregtech.api.unification.material.Material gtmaterial) {
+    public CasingBase(String materialName, Material gtmaterial) {
         super(net.minecraft.block.material.Material.ROCK);
-        ModRecipeFactory.casingFactory(gtmaterial);
         setDefaultProperties(materialName);
+        this.gtMaterial = gtmaterial;
     }
-
 
     private void setDefaultProperties(String materialName) {
 
@@ -41,6 +50,16 @@ public class CasingBase extends Block implements IHasModel {
 
         ModBlocks.BLOCKS.add(this);
         ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(Objects.requireNonNull(this.getRegistryName())));
+    }
+
+    public void addRecipe() {
+        ModHandler.addShapedRecipe("test", new ItemStack(this, 2),
+                "PhP",
+                "PFP",
+                "PwP",
+                'P', new UnificationEntry(OrePrefix.plate, this.gtMaterial),
+                'F', new UnificationEntry(OrePrefix.gear, this.gtMaterial)
+        );
     }
 
     @Override
