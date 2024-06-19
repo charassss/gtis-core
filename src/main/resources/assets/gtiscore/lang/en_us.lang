@@ -1,1 +1,15 @@
+#Groups
+itemGroup.gtis=GregTech:Infinity SkyBlock GTIS
+
+#Casings
 tile.metal_casing.mana_steel.name=Steel Mana Machine Casing
+
+#Liquid
+gtiscore.material.mana=Liquid Mana
+
+#Metals
+gtiscore.material.manasteel=Manasteel
+
+#Items
+item.ori_rock_cube.name=OriRockCube
+item.zhu_fu_rong_guang.name=ラストピースに祝福と栄光を

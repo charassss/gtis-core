@@ -80,7 +80,7 @@ public class CasingBase extends Block implements IHasModel {
                 "PFP",
                 "PwP",
                 'P', new UnificationEntry(OrePrefix.plate, this.gtMaterial),
-                'F', new UnificationEntry(OrePrefix.gear, this.gtMaterial)
+                'F', new UnificationEntry(OrePrefix.frameGt, this.gtMaterial)
         );
     }
 

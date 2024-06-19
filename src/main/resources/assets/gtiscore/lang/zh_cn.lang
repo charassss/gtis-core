@@ -1,1 +1,15 @@
+#Groups
+itemGroup.gtis=GregTech:Infinity SkyBlock GTIS
+
+#Casings
 tile.metal_casing.mana_steel.name=魔力机器方块
+
+#Liquid
+gtiscore.material.mana=液态魔力
+
+#Metals
+gtiscore.material.manasteel=魔力钢
+
+#Items
+item.ori_rock_cube.name=固源岩
+item.zhu_fu_rong_guang.name=ラストピースに祝福と栄光を

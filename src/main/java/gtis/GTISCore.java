@@ -1,12 +1,14 @@
 package gtis;
 
 import gregtech.api.unification.material.event.MaterialEvent;
+import gtis.common.event.SoundHandler;
 import gtis.common.materials.MaterialMetals;
 import gtis.common.recipe.ModGregRecipes;
 import gtis.common.recipe.ModRecipes;
 import gtis.common.te.ModMetaTileEntities;
 import gtis.common.CommonProxy;
 import gtis.common.Reference;
+import net.minecraft.client.audio.Sound;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
