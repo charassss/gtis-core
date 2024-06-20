@@ -2,6 +2,7 @@ package gtis.common;
 
 import gtis.GTISCore;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvent;
 import org.jetbrains.annotations.NotNull;
 
 /**

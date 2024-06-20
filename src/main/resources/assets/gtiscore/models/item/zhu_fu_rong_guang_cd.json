@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "gtiscore:items/zhu_fu_rong_guang"
+    "layer0": "gtiscore:items/zhu_fu_rong_guang_cd"
   }
 }

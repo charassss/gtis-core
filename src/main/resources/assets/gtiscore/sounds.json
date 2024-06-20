@@ -1,8 +1,11 @@
 {
-  "gtiscore.zhufurongguang": {
+  "music.zhufurongguang": {
     "category": "music",
     "sounds": [
-      "track"
+      {
+        "name": "gitscore:music/track",
+        "stream": "true"
+      }
     ]
   }
 }
