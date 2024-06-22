@@ -1,18 +1,14 @@
 package gtis.common.item;
 
 import gtis.GTISCore;
+import gtis.common.sound.ModSounds;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
-import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
-import net.minecraftforge.event.ForgeEventFactory;
-import net.minecraftforge.event.entity.PlaySoundAtEntityEvent;
-
-import static gtis.common.GTISUtility.gtisId;
-import static gtis.common.item.ModItems.ZHU_FU_RONG_GUANG_CD;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * @author Orirock
@@ -24,17 +20,14 @@ public class ZhuFuRongGuang extends ItemBase {
     }
 
     @Override
-//    @SubscribeEvent
-    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
-        GTISCore.logger.info("114514");
+    public @NotNull ActionResult<ItemStack> onItemRightClick(@NotNull World worldIn, @NotNull EntityPlayer playerIn, @NotNull EnumHand handIn) {
         ItemStack zhuFuRongGuang = playerIn.getHeldItem(handIn);
-        if (zhuFuRongGuang.getItem() == ZHU_FU_RONG_GUANG_CD) {
-            GTISCore.logger.info(worldIn);
-//            ForgeEventFactory.onPlaySoundAtEntity(playerIn, new SoundEvent(gtisId("gtiscore:music.zhufurongguang")), playerIn.getSoundCategory(), 1.0F, 1.0F);
-            new PlaySoundAtEntityEvent(playerIn, new SoundEvent(gtisId("gtiscore:music.zhufurongguang")),playerIn.getSoundCategory(),1.0F, 1.0F);
+        GTISCore.logger.info(worldIn);
+        if (!worldIn.isRemote) {
+            worldIn.playSound(null, playerIn.posX, playerIn.posY, playerIn.posZ, ModSounds.ZHU_FU_RONG_GUANG,
+                playerIn.getSoundCategory(), 1.0F, 1.0F);
         }
-
-        return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, zhuFuRongGuang);
+        return new ActionResult<>(EnumActionResult.SUCCESS, zhuFuRongGuang);
 
     }
 }

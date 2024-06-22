@@ -4,10 +4,12 @@ import gregtech.api.unification.material.event.MaterialEvent;
 import gtis.common.materials.MaterialMetals;
 import gtis.common.recipe.ModGregRecipes;
 import gtis.common.recipe.ModRecipes;
+import gtis.common.sound.ModSounds;
 import gtis.common.te.ModMetaTileEntities;
 import gtis.common.CommonProxy;
 import gtis.common.Reference;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -70,6 +72,11 @@ public class GTISCore {
     public void registerMaterials(MaterialEvent event) {
         MaterialFluids.init();
         MaterialMetals.init();
+    }
+
+    @SubscribeEvent
+    public static void onSoundEventRegistration(RegistryEvent.@NotNull Register<SoundEvent> event) {
+        ModSounds.registerAllSounds(event);
 
     }
 }
