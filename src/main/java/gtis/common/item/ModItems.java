@@ -15,4 +15,5 @@ public class ModItems {
 
     public static final Item ORI_ROCK_CUBE = new ItemBase("ori_rock_cube");
     public static final Item ZHU_FU_RONG_GUANG_CD = new ZhuFuRongGuang("zhu_fu_rong_guang_cd");
+    public static final Item MANA_IRON_INGOT = new ZhuFuRongGuang("mana_iron_ingot");
 }

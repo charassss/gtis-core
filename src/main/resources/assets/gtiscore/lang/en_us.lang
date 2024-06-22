@@ -2,14 +2,21 @@
 itemGroup.gtis=GregTech:Infinity SkyBlock GTIS
 
 #Casings
-tile.metal_casing.mana_steel.name=Steel Mana Machine Casing
+tile.metal_casing.mana_steel.name=Mana Steel Machine Casing
+tile.metal_casing.elven_elementium.name=Elven Elementium Machine Casing
+tile.metal_casing.terra_steel.name=Terra Steel Machine Casing
+
 
 #Liquid
 gtiscore.material.mana=Liquid Mana
 
 #Metals
 gtiscore.material.manasteel=Manasteel
+gtiscore.material.elvenelementium=Elementium
+gtiscore.material.terrasteel=Terrasteel
+
 
 #Items
-item.ori_rock_cube.name=OriRockCube
+item.ori_rock_cube.name=OriRock Cube
 item.zhu_fu_rong_guang_cd.name=ラストピースに祝福と栄光を
+item.mana_iron_ingot.name=ManaIron Ingot

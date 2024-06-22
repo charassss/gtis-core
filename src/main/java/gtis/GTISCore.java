@@ -1,5 +1,6 @@
 package gtis;
 
+import gregtech.api.items.toolitem.ToolBuilder;
 import gregtech.api.unification.material.event.MaterialEvent;
 import gtis.common.materials.MaterialMetals;
 import gtis.common.recipe.ModGregRecipes;
@@ -53,6 +54,7 @@ public class GTISCore {
     public void preInit(@NotNull FMLPreInitializationEvent event) {
         logger = event.getModLog();
         ModMetaTileEntities.init();
+//        ModTools.init();
     }
 
     @SubscribeEvent

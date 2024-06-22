@@ -22,7 +22,6 @@ public class ZhuFuRongGuang extends ItemBase {
     @Override
     public @NotNull ActionResult<ItemStack> onItemRightClick(@NotNull World worldIn, @NotNull EntityPlayer playerIn, @NotNull EnumHand handIn) {
         ItemStack zhuFuRongGuang = playerIn.getHeldItem(handIn);
-        GTISCore.logger.info(worldIn);
         if (!worldIn.isRemote) {
             worldIn.playSound(null, playerIn.posX, playerIn.posY, playerIn.posZ, ModSounds.ZHU_FU_RONG_GUANG,
                 playerIn.getSoundCategory(), 1.0F, 1.0F);

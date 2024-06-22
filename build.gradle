@@ -100,6 +100,17 @@ repositories {
         name 'GTCEu Maven'
         url 'https://maven.gtceu.com'
     }
+    maven {
+        name = "buildcraft"
+        url = "https://mod-buildcraft.com/maven"
+    }
+    maven {
+        name = "thiakil"
+        url = "https://maven.thiakil.com"
+    }
+    maven {
+        url = "https://dvs1.progwml6.com/files/maven"
+    }
     mavenLocal() // Must be last for caching to work
 }
 
@@ -137,6 +148,8 @@ dependencies {
     // no provided maven
 
     api rfg.deobf("curse.maven:extra-utilities-2-225561:2678374")
+    api rfg.deobf("vazkii.botania:Botania:r1.10-364.4")
+    api rfg.deobf("com.azanor.baubles:Baubles:1.12-1.5.2")
 //    api rfg.deobf("curse.maven:ae2-extended-life-570458:4402048")
 }
 

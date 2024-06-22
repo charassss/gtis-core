@@ -19,6 +19,7 @@ public class ModGregRecipes {
     public static void init() {
         steamTestRecipes();
         chemicalReactorRecipes();
+        centrifugesRecipes();
     }
 
     public static void steamTestRecipes() {
@@ -48,5 +49,23 @@ public class ModGregRecipes {
                 .buildAndRegister();
     }
 
+    public static void centrifugesRecipes(){
+        RecipeMaps.CENTRIFUGE_RECIPES.recipeBuilder()
+                .input(OrePrefix.ingot,manaSteel)
+                .fluidOutputs(mana.getFluid(3))
+                .output(OrePrefix.ingot,Steel)
+                .duration(200)
+                .EUt(VA[LV])
+                .buildAndRegister();
+
+        RecipeMaps.CENTRIFUGE_RECIPES.recipeBuilder()
+                .input(OrePrefix.block,manaSteel)
+                .fluidOutputs(mana.getFluid(27))
+                .output(OrePrefix.block,Steel)
+                .duration(1800)
+                .EUt(VA[LV])
+                .buildAndRegister();
+
+    }
 }
 

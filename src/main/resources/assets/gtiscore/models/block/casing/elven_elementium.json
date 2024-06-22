@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "particle": "gtiscore:blocks/casing/elven_elementium",
+    "all": "gtiscore:blocks/casing/elven_elementium"
+  }
+}
