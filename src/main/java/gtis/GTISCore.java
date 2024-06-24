@@ -2,7 +2,9 @@ package gtis;
 
 import gregtech.api.items.toolitem.ToolBuilder;
 import gregtech.api.unification.material.event.MaterialEvent;
+import gtis.common.item.OreDictionaryHandler;
 import gtis.common.materials.MaterialMetals;
+import gtis.common.recipe.ModBotaniaRecipes;
 import gtis.common.recipe.ModGregRecipes;
 import gtis.common.recipe.ModRecipes;
 import gtis.common.sound.ModSounds;
@@ -54,13 +56,17 @@ public class GTISCore {
     public void preInit(@NotNull FMLPreInitializationEvent event) {
         logger = event.getModLog();
         ModMetaTileEntities.init();
+        OreDictionaryHandler.init();
 //        ModTools.init();
     }
 
     @SubscribeEvent
     public void onRecipeRegister(RegistryEvent<IRecipe> event) {
         ModGregRecipes.init();
+        ModBotaniaRecipes.init();
     }
+
+
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
