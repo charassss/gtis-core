@@ -1,8 +1,7 @@
 package gtis;
 
-import gregtech.api.items.toolitem.ToolBuilder;
 import gregtech.api.unification.material.event.MaterialEvent;
-import gtis.common.item.OreDictionaryHandler;
+import gtis.common.init.OreDictionaryHandler;
 import gtis.common.materials.MaterialMetals;
 import gtis.common.recipe.ModBotaniaRecipes;
 import gtis.common.recipe.ModGregRecipes;

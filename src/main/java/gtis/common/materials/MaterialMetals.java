@@ -22,7 +22,7 @@ public class MaterialMetals {
     private static final int END_ID = START_ID + 1000;
 
     public static void init() {
-        manaSteel = new Material.Builder(getMetalId(), gtisId("manaSteel"))
+        manaSteel = new Material.Builder(getMetalId(), gtisId("manasteel"))
                 .ingot()
                 .color(0x00B4FF)
                 //CEu uses the hex color code, but make sure to put 0x before the hex color
@@ -38,7 +38,7 @@ public class MaterialMetals {
                 //Temp, GasTier, eutOverride, durationOveride (in ticks)
                 .build();
 
-        elvenElementium = new Material.Builder(getMetalId(), gtisId("elvenElementium"))
+        elvenElementium = new Material.Builder(getMetalId(), gtisId("elven_elementium"))
                 .ingot()
                 .color(0xF152DB)
                 .iconSet(MaterialIconSet.METALLIC)
@@ -47,7 +47,7 @@ public class MaterialMetals {
                 .blast(2000, BlastProperty.GasTier.HIGHER)
                 .build();
 
-        terraSteel = new Material.Builder(getMetalId(), gtisId("terraSteel"))
+        terraSteel = new Material.Builder(getMetalId(), gtisId("terrasteel"))
                 .ingot()
                 .color(0x57FF09)
                 .iconSet(MaterialIconSet.METALLIC)

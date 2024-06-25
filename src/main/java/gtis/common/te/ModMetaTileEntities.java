@@ -11,7 +11,7 @@ public class ModMetaTileEntities {
     private static SteamTest STEAM_TEST;
 
     public static void init() {
-        STEAM_TEST = registerMetaTileEntity(30201, new SteamTest(gtisId("STEAM_TEST"), false));
+        STEAM_TEST = registerMetaTileEntity(30201, new SteamTest(gtisId("steam_test"), false));
     }
 
 
