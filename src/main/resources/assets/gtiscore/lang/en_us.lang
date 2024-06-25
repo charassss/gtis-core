@@ -12,7 +12,7 @@ gtiscore.material.mana=Liquid Mana
 
 #Metals
 gtiscore.material.manasteel=Manasteel
-gtiscore.material.elvenelementium=Elementium
+gtiscore.material.elven_elementium=Elementium
 gtiscore.material.terrasteel=Terrasteel
 
 
@@ -20,3 +20,4 @@ gtiscore.material.terrasteel=Terrasteel
 item.ori_rock_cube.name=OriRock Cube
 item.zhu_fu_rong_guang_cd.name=ラストピースに祝福と栄光を
 item.mana_iron_ingot.name=ManaIron Ingot
+item.lux_rune.name=Rune of Lux

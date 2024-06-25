@@ -13,7 +13,7 @@ gtiscore.material.mana=液态魔力
 
 #Metals
 gtiscore.material.manasteel=魔力钢
-gtiscore.material.elvenelementium=源质钢
+gtiscore.material.elven_elementium=源质钢
 gtiscore.material.terrasteel=泰拉钢
 
 
@@ -22,3 +22,4 @@ gtiscore.material.terrasteel=泰拉钢
 item.ori_rock_cube.name=固源岩
 item.zhu_fu_rong_guang_cd.name=ラストピースに祝福と栄光を
 item.mana_iron_ingot.name=魔力铁锭
+item.lux_rune.name=光之符文
