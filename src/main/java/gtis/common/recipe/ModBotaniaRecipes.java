@@ -29,6 +29,7 @@ public class ModBotaniaRecipes {
     private static void manaPoolRecipe(){
         //Add
         BotaniaAPI.registerManaInfusionRecipe(new ItemStack(gtis.common.item.ModItems.MANA_IRON_INGOT), new ItemStack(Items.IRON_INGOT),3000);
+        BotaniaAPI.registerManaInfusionRecipe(new ItemStack(vazkii.botania.common.item.ModItems.manaResource,1,4),new ItemStack(gtis.common.item.ModItems.UNCHARGED_TERRASTEEL_INGOT),500000);
         //Remove
     }
 
@@ -51,5 +52,10 @@ public class ModBotaniaRecipes {
         BotaniaAPI.registerRuneAltarRecipe(new ItemStack(vazkii.botania.common.item.ModItems.rune, 2, 2), 6200, new Object[]{"powderMana", new ItemStack(gtis.common.item.ModItems.MANA_IRON_INGOT),new ItemStack(gtis.common.item.ModItems.MANA_IRON_INGOT), "stone", "blockCoal", new ItemStack(Blocks.BROWN_MUSHROOM)});
         BotaniaAPI.registerRuneAltarRecipe(new ItemStack(vazkii.botania.common.item.ModItems.rune, 2, 2), 6200, new Object[]{"powderMana", new ItemStack(gtis.common.item.ModItems.MANA_IRON_INGOT),new ItemStack(gtis.common.item.ModItems.MANA_IRON_INGOT), "stone", "blockCoal", new ItemStack(Blocks.RED_MUSHROOM)});
 
+        //UnChangedTerraSteel
+        BotaniaAPI.registerRuneAltarRecipe(new ItemStack(gtis.common.item.ModItems.UNCHARGED_TERRASTEEL_INGOT),500000,new Object[]{new ItemStack(gtis.common.item.ModItems.MANA_IRON_INGOT),new ItemStack(gtis.common.item.ModItems.MANA_IRON_INGOT),"manaPearl","manaDiamond"});
+
     }
+
+
 }
